@@ -1,68 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Travel Trivia</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Trivia</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+  <body>
 
-  <!-- Starting the game -->
-  <div class="container">
+    <!-- Starting the game -->
+    <div class="startContainer">
+      <h1>Travel Trivia</h1>
+      <button id="startButton">Start game</button>
+    </div>
 
-    <button id="startButton">Start game</button>
+    <!-- Counter -->
+     <h1 id ="timer">Time Remaining: <span id = "timerCounter">60 Seconds</span></h1>
 
-    <h1>Travel Trivia</h1>
-
-      <p>What is the capital of New Zealand?</p>
+     <!-- Questions -->
+    <div class="mainContainer">
+      <p>1) What is the capital of New Zealand?</p>
         <input type="radio" id="mc" name="question1" value="Queenstown">Queenstown
         <input type="radio" id="mc" name="question1" value="Wellington">Wellington
         <input type="radio" id="mc" name="question1" value="Auckland">Auckland
         <input type="radio" id="mc" name="question1" value="Christchurch">Christchurch
-        
-      <p>On what continent is Egypt located on?</p>
+
+        <br>
+
+      <p>2) On what continent is Egypt located on?</p>
         <input type="radio" id="mc" name="question2" value="Europe">Europe
         <input type="radio" id="mc" name="question2" value="Asia">Asia
         <input type="radio" id="mc" name="question2" value="Africa">Africa
         <input type="radio" id="mc" name="question2" value="Middle East">Middle East
 
-      <p>In what ocean is Hawaii located in?</p>
+        <br>
+        
+      <p>3) In what ocean is Hawaii located in?</p>
         <input type="radio" id="mc" name="question3" value="Pacific Ocean">Pacific Ocean
         <input type="radio" id="mc" name="question3" value="Atlantic Ocean">Atlantic Ocean
         <input type="radio" id="mc" name="question3" value="Indian Ocean">Indian Ocean
         <input type="radio" id="mc" name="question3" value="Hawaiian Ocean">Hawaiian Ocean
 
-      <p>Which country is not part of Central America?</p>
+        <br>
+        
+      <p>4) Which country is not part of Central America?</p>
         <input type="radio" id="mc" name="question4" value="Costa Rica">Costa Rica
         <input type="radio" id="mc" name="question4" value="Belize">Belize
         <input type="radio" id="mc" name="question4" value="Colombia">Colombia
         <input type="radio" id="mc" name="question4" value="Guatemala">Guatemala
 
-      <p>hich country hosted the last Winter Olympics?</p>
+        <br>
+        
+      <p>5) Which country hosted the last Winter Olympics?</p>
         <input type="radio" id="mc" name="question5" value="Japan">Japan
         <input type="radio" id="mc" name="question5" value="South Korea">South Korea
         <input type="radio" id="mc" name="question5" value="China">China
         <input type="radio" id="mc" name="question5" value="Singapore">Singapore
 
         <br>
+        <!-- Submit Button  -->
+        <button id ="submit">Submit</button>
+    </div>
 
-    <input id="button" type="button" value="Submit" onclick="check();">
+      <!-- Results page -->
+    <div id="results">
+      <p>Correct Answers:
+        <span id="correct_answers">0</span>
+      </p>
+      <p>Incorrect Answers:
+        <span id="wrong_answers">0</span>
+      </p>
+      <p>Unanswered: 
+        <span id = "unanswered">0</span>
+      </p>
 
-  </div>
-
-  <div id="finished">
-    	<p>Correct Answers: <span id = "correct_answers">0</span></p>
-			<p>Incorrect Answers: <span id = "wrong_answers">0</span></p>
-  </div>
+    </div>
 
 
-  <script src="assets/javascript/app.js"></script>
-</body>
+    <script src="assets/javascript/app.js"></script>
+  </body>
 
 </html>
